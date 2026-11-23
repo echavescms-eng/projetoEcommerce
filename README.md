@@ -1,4 +1,4 @@
-PetShop Online
+# PetShop Online
 
 Um e-commerce simples para uma pet shop, desenvolvido com **HTML, CSS, JavaScript** e **Bootstrap 5**. O projeto apresenta produtos para pets e permite ao usuário navegar pelo catálogo, adicionar itens ao carrinho e acompanhar o valor da compra.
 
