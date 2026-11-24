@@ -23,12 +23,16 @@ Um e-commerce simples para uma pet shop, desenvolvido com **HTML, CSS, JavaScrip
 Este é um projeto front-end simplificado: não precisa instalar dependências nem configurar um banco de dados.
 
 1. 📥 Clone ou baixe este repositório.
+   git clone https://github.com/echavescms-eng/projetoEcommerce.git
+
 2. 📂 Abra a pasta do projeto.
+   cd nome-pasta-projeto
+   
 3. 🌐 Abra `index.html` no navegador.
 
 Para desenvolver com atualização automática da página, abra a pasta no Visual Studio Code e execute `index.html` usando a extensão **Live Server**. 🔄
 
-## 🗂️ Estrutura sugerida
+## 🗂️ Estrutura 
 
 ```text
 petshop-ecommerce/
@@ -59,4 +63,4 @@ Este projeto tem finalidade educacional e demonstra o fluxo básico de uma loja 
 
 ## 📜 Licença
 
-Este projeto pode ser utilizado para fins de estudo e prática. Para distribuir ou reutilizar o código em outros contextos, adicione uma licença específica. 🌟
+Este projeto pode ser utilizado para fins de estudo e prática.
