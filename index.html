@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/carrosselformulario.css">
 </head>
 <body>
     <header class="header">
@@ -30,17 +31,37 @@
     <script src="script.js"></script>
     
     <body>
-        
         <main>
             <section class="destaque">
                 <h1>Bem-vindo à BizuExpress</h1>
             </section>
+        </main>
+        <div class="pagina-produtos">
+            <section class="pesquisa">
+                <h1>Encontre tudo em um só lugar</h1>
+
+                <form id="form-busca">
+                <input
+                    type="search"
+                    id="input-busca"
+                    class="campo-busca"
+                    placeholder="O que você está procurando hoje?"
+                    aria-label="Buscar produtos"
+                >
+                <button type="submit">Buscar</button>
+                </form>
+            </section>
+
+        <div class="lista-produtos" id="lista-produtos"></div>
+        </div>
+        <main>
             <section id="produtos" class="secao-produtos">
                 <h2>Produtos</h2>
                 <div id="lista-produtos" class="lista-produtos"></div>
             </section>
-            
+        
         </main>
+        
         <footer class="footer">
             <div class="container footer__content">
                 <p class="footer__copy">&copy; 2026 Bizu Express. Todos os direitos reservados. Se mexer no código está sujeito a paulada</p>
