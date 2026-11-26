@@ -1,6 +1,13 @@
 async function carregaProdutos(){
     const container = document.getElementById("lista-produtos");
+//botao menu
+    const botaoMenu = document.getElementById("menuToggle");
+const menu = document.getElementById("menuNav");
 
+botaoMenu.addEventListener("click", function () {
+    const aberto = menu.classList.toggle("is-open");
+    botaoMenu.setAttribute("aria-expanded", aberto);
+});
     //busca dados na api
     const resposta = await fetch('https://dummyjson.com/products?limit=100');
     const dados = await resposta.json();
