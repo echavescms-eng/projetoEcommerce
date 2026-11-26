@@ -1,6 +1,6 @@
-# 🐾 PetShop Online
+# 🪖 BizuExpress
 
-Um e-commerce simples para uma pet shop, desenvolvido com **HTML, CSS, JavaScript** e **Bootstrap 5**. Aqui, os humanos encontram produtos para seus companheiros de quatro patas, exploram o catálogo e montam o carrinho com praticidade. 🐈‍⬛ 🦴
+Um e-commerce simples para um site online, desenvolvido com **HTML, CSS e JavaScript**. Aqui, os humanos encontram produtos para seus companheiros de quatro patas, exploram o catálogo e montam o carrinho com praticidade. 🎖️
 
 ## 🧭 O que dá para fazer
 
@@ -16,7 +16,6 @@ Um e-commerce simples para uma pet shop, desenvolvido com **HTML, CSS, JavaScrip
 - 🧱 HTML5
 - 🎨 CSS3
 - 🪄 JavaScript (ES6+)
-- 🧩 Bootstrap 5
 
 ## 🚀 Como executar
 
@@ -39,15 +38,13 @@ petshop-ecommerce/
 ├── index.html
 ├── css/
 │   └── style.css
+│   └── header.css
+│   └── footer.css
 ├── js/
 │   └── script.js
 └── assets/
     └── imagens/
 ```
-
-## 🧩 Bootstrap 5
-
-O Bootstrap pode ser incluído no `index.html` usando os arquivos CDN oficiais. Consulte a documentação em [getbootstrap.com](https://getbootstrap.com/). 🧷
 
 ## 🔎 Observações
 
