@@ -35,3 +35,22 @@ produtos.forEach((produto) => {
 
 //BUSCA INICIAL
 carregaProdutos();
+
+//CARROSSEL DAS PROMOÇÕES
+const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    let index = 0;
+
+    function atualizar() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % total;
+      atualizar();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + total) % total;
+      atualizar();
+    });

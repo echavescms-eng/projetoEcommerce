@@ -3,17 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     color: #212529;
 }
-
 a {
     text-decoration: none;
 }
-
 .container {
     width: 100%;
     max-width: 1100px;
@@ -21,7 +18,6 @@ a {
     padding: 0 16px;
 }
 /* Configurações gerais */
-
 * {
   box-sizing: border-box;
 }
@@ -38,7 +34,6 @@ body {
   line-height: 1.6;
 }
 
-
 /* Cabeçalho e navegação */
 
 .navegacao {
@@ -50,7 +45,6 @@ body {
   justify-content: space-between;
   gap: 24px;
 }
-
 
 /* Destaque */
 .destaque {
@@ -102,6 +96,40 @@ body {
   text-align: center;
   font-size: 2rem;
 }
+
+/* Carrosel de produtos em promoção */
+.carrossel {
+      position: relative;
+      max-width: 600px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
 /* Grade usada pelos cards estáticos e pelos produtos carregados */
 .lista-produtos {
