@@ -106,30 +106,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Carrossel de promoções
-  const slides = document.getElementById("slides");
-  const botaoProximo = document.getElementById("next");
-  const botaoAnterior = document.getElementById("prev");
 
-  if (slides && botaoProximo && botaoAnterior) {
-    const totalSlides = slides.children.length;
-    let indiceAtual = 0;
+const slides = document.getElementById('slides');
+const imgs = slides.querySelectorAll('img');
+const dots = document.querySelectorAll('#indicadores .dot');
+const carrossel = document.querySelector('.carrossel');
+let atual = 0;
 
-    function atualizarCarrossel() {
-      slides.style.transform = `translateX(-${indiceAtual * 100}%)`;
-    }
+function irPara(i) {
+  // loop infinito: depois do último volta ao primeiro e vice-versa
+  atual = (i + imgs.length) % imgs.length;
 
-    if (totalSlides > 0) {
-      botaoProximo.addEventListener("click", () => {
-        indiceAtual = (indiceAtual + 1) % totalSlides;
-        atualizarCarrossel();
-      });
+  const img = imgs[atual];
+  const gap = parseFloat(getComputedStyle(slides).gap) || 0;
 
-      botaoAnterior.addEventListener("click", () => {
-        indiceAtual = (indiceAtual - 1 + totalSlides) % totalSlides;
-        atualizarCarrossel();
-      });
-    }
-  }
+  // posição que deixa o slide ativo centralizado no carrossel
+  const deslocamento =
+    img.offsetLeft - (carrossel.clientWidth - img.clientWidth) / 2;
 
-  carregarProdutos();
+  slides.style.transform = `translateX(${-deslocamento}px)`;
+
+  imgs.forEach((el, idx) => el.classList.toggle('ativo', idx === atual));
+  dots.forEach((d, idx) => {
+    d.classList.toggle('ativo', idx === atual);
+    d.setAttribute('aria-selected', idx === atual);
+  });
+}
+
+document.getElementById('prev').addEventListener('click', () => irPara(atual - 1));
+document.getElementById('next').addEventListener('click', () => irPara(atual + 1));
+dots.forEach((d, idx) => d.addEventListener('click', () => irPara(idx)));
+
+// recalcula ao redimensionar a janela
+window.addEventListener('resize', () => irPara(atual));
+
+// espera as imagens carregarem para medir corretamente
+window.addEventListener('load', () => irPara(0));
+
+// opcional: troca automática a cada 5 segundos
+// setInterval(() => irPara(atual + 1), 5000);
+
+carregarProdutos();
 });

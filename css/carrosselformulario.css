@@ -42,3 +42,74 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+
+/* carrossel de promoções */
+.carrossel {
+  position: relative;
+  max-width: 100%;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.4s ease;
+}
+
+.slides img {
+  width: 100%;              /* ocupa parte da tela: sobra espaço para o vizinho aparecer */
+  flex-shrink: 0;
+  display: block;
+  opacity: 0.5;            /* slides inativos mais apagados */
+  transform: scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slides img.ativo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 2;
+}
+.btn:hover { background: rgba(0, 0, 0, 0.85); }
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Indicadores */
+.indicadores {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot.ativo {
+  background: #fff;
+  transform: scale(1.25);
+}
