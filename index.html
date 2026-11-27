@@ -1,98 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Bizu Express</title>
-
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/carrosselformulario.css">
-<link rel="stylesheet" href="css/filtropesquisa.css">
-</head>
-
-<body>
-<!-- Cabeçalho do site -->
-<header class="header">
-    <div class="site-container header__content">
-    <a class="header__logo" href="#">Bizu Express</a>
-
-    <button
-        class="header__toggle"
-        id="menuToggle"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="menuNav">
-
-    </button>
-
-    <nav class="header__nav" id="menuNav" aria-label="Navegação principal">
-        <a class="header__link header__link--active" href="#">Home</a>
-        <a class="header__link" href="#">Produtos</a>
-        <a class="header__link" href="#">Sobre</a>
-        <a class="header__link" href="#">Contato</a>
-    </nav>
-    </div>
-</header>
-
-<main>
-    <!-- Apresentação -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Bizu Express</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/carrosselformulario.css">
+        <link rel="stylesheet" href="css/filtropesquisa.css">
+        <link rel="stylesheet" href="css/beneficios.css">
+        
+        
+    </head>
+    
+    <body>
+        <!-- Cabeçalho do site -->
+        <header class="header">
+            <div class="site-container header__content">
+                <a class="header__logo" href="#">Bizu Express</a>
+                
+                <button
+                class="header__toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menuNav">
+                
+            </button>
+            
+            <nav class="header__nav" id="menuNav" aria-label="Navegação principal">
+                <a class="header__link header__link--active" href="#">Home</a>
+                <a class="header__link" href="#">Produtos</a>
+                <a class="header__link" href="#">Sobre</a>
+                <a class="header__link" href="#">Contato</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Apresentação -->
     <section class="destaque">
     <div class="site-container">
         <h1>Bem-vindo à BizuExpress</h1>
     </div>
-    </section>
+</section>
 
 <!-- Carrossel de promoções -->
 <section class="carrossel" aria-label="Promoções">
-<div class="slides" id="slides">
-    <img src="assets/imagens/1.png" alt="Promoção de micro-ondas">
-    <img src="assets/imagens/2.png" alt="Promoção de cooktop elétrico">
-    <img src="assets/imagens/3.png" alt="Promoção de liquidificador">
-</div>
-
-<button class="btn prev" id="prev" aria-label="Slide anterior">&#10094;</button>
-<button class="btn next" id="next" aria-label="Próximo slide">&#10095;</button>
-
-<div class="indicadores" id="indicadores" role="tablist" aria-label="Escolher slide">
-    <button class="dot ativo" role="tab" aria-label="Slide 1" aria-selected="true"></button>
-    <button class="dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
-    <button class="dot" role="tab" aria-label="Slide 3" aria-selected="false"></button>
-</div>
+    <div class="slides" id="slides">
+        <img src="assets/imagens/1.png" alt="Promoção de micro-ondas">
+        <img src="assets/imagens/2.png" alt="Promoção de cooktop elétrico">
+        <img src="assets/imagens/3.png" alt="Promoção de liquidificador">
+    </div>
+    
+    <button class="btn prev" id="prev" aria-label="Slide anterior">&#10094;</button>
+    <button class="btn next" id="next" aria-label="Próximo slide">&#10095;</button>
+    
+    <div class="indicadores" id="indicadores" role="tablist" aria-label="Escolher slide">
+        <button class="dot ativo" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+        <button class="dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+        <button class="dot" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+    </div>
 </section>
+<!-- Beneficios -->
 
+        <section class="beneficios">
+        <div class="beneficios-lista">
+            <div class="beneficios-item">
+            <div class="beneficios-icon" aria-hidden="true">🚚</div>
+            <div>
+                <h6>Frete Grátis</h6>
+                <small>Nas compras acima de R$ 199</small>
+            </div>
+            </div>
 
+            <div class="beneficios-item">
+            <div class="beneficios-icon" aria-hidden="true">💳</div>
+            <div>
+                <h6>Até 10x sem juros</h6>
+                <small>Ou 5% OFF no Pix</small>
+            </div>
+            </div>
 
-    <!-- Busca e lista de produtos -->
-    <section id="produtos" class="secao-produtos">
-    <div class="site-container">
-        <h2>Produtos</h2>
-        
-        <div class="pagina-produtos">
-        <section class="pesquisa" aria-label="Busca de produtos">
-            <h3>Encontre tudo em um só lugar</h3>
+            <div class="beneficios-item">
+            <div class="beneficios-icon" aria-hidden="true">🔒</div>
+            <div>
+                <h6>Compra Segura</h6>
+                <small>Seus dados 100% protegidos</small>
+            </div>
+            </div>
 
-            <form id="form-busca">
-            <input
-                type="search"
-                id="input-busca"
-                class="campo-busca"
-                placeholder="O que você está procurando hoje?"
-                aria-label="Buscar produtos"
-            >
-            <button type="submit">Buscar</button>
-            </form>
-                <!-- Pesquisa por filtro -->
-            <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
+            <div class="beneficios-item">
+            <div class="beneficios-icon" aria-hidden="true">🔄</div>
+            <div>
+                <h6>Troca Fácil</h6>
+                <small>Até 7 dias após o recebimento</small>
+            </div>
+            </div>
+        </div>
         </section>
 
-        <div class="lista-produtos" id="lista-produtos"></div>
-        </div>
-    </div>
-    </section>
+
+
+<!-- Busca e lista de produtos -->
+<section id="produtos" class="secao-produtos">
+    <div class="site-container">
+        
+        <div class="pagina-produtos">
+            <section class="pesquisa" aria-label="Busca de produtos">
+                <h3>Encontre tudo em um só lugar</h3>
+                
+                <form id="form-busca">
+                    <input
+                    type="search"
+                    id="input-busca"
+                    class="campo-busca"
+                    placeholder="O que você está procurando hoje?"
+                    aria-label="Buscar produtos"
+                    >
+                    <button type="submit">Buscar</button>
+                </form>
+                
+                <!-- Pesquisa por filtro -->
+                <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
+            </section>
+            
+                <h2>Produtos</h2>
+                <div class="lista-produtos" id="lista-produtos"></div>
+                </div>
+            </div>
+            </section>
 
 
 </main>
