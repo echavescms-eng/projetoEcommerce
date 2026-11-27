@@ -8,7 +8,6 @@ Um e-commerce simples para um site online, desenvolvido com **HTML, CSS e JavaSc
 - 🪺 Conferir nome, descrição, preço e imagem dos produtos
 - 🛒 Adicionar e remover itens do carrinho
 - 🧮 Acompanhar quantidades e o total da compra
-- 📱 Navegar por um layout responsivo com Bootstrap 5
 - ✨ Usar uma interface simples e intuitiva
 
 ## 🧰 Tecnologias
