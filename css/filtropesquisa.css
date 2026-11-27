@@ -1,0 +1,35 @@
+.filtros {
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background: #fff;
+    color: #333;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.tag:hover {
+    border-color: #333;
+}
+
+.tag--ativa {
+    background: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.sem-resultados {
+    grid-column: 1 / -1;
+    padding: 24px;
+    text-align: center;
+    color: #666;
+}

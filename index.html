@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/carrosselformulario.css">
+<link rel="stylesheet" href="css/filtropesquisa.css">
 </head>
 
 <body>
@@ -63,11 +64,13 @@
 </div>
 </section>
 
+
+
     <!-- Busca e lista de produtos -->
     <section id="produtos" class="secao-produtos">
     <div class="site-container">
         <h2>Produtos</h2>
-
+        
         <div class="pagina-produtos">
         <section class="pesquisa" aria-label="Busca de produtos">
             <h3>Encontre tudo em um só lugar</h3>
@@ -82,12 +85,16 @@
             >
             <button type="submit">Buscar</button>
             </form>
+                <!-- Pesquisa por filtro -->
+            <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
         </section>
 
         <div class="lista-produtos" id="lista-produtos"></div>
         </div>
     </div>
     </section>
+
+
 </main>
 
 <!-- Rodapé do site -->
