@@ -4,7 +4,7 @@ Um e-commerce simples para um site online, desenvolvido com **HTML, CSS e JavaSc
 
 ## 🧭 O que dá para fazer
 
-- 🐕 Explorar produtos para cães e gatos
+- ⚔️ Explorar produtos essenciais para você
 - 🪺 Conferir nome, descrição, preço e imagem dos produtos
 - 🛒 Adicionar e remover itens do carrinho
 - 🧮 Acompanhar quantidades e o total da compra
